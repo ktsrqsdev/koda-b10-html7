@@ -1,6 +1,7 @@
 :root {
     --calc: rgb(234, 237, 251);
     --btn-primary: rgb(253, 253, 253);
+    --btn-primary-hover: rgba(163, 163, 163, 0.378);
     --btn-memory: rgb(247, 235, 255);
     --btn-operation: rgb(214, 225, 242);
     --font-btn-memory: rgb(177, 34, 254);
@@ -53,6 +54,10 @@ button {
     font-size: 1.3rem;
     text-transform: uppercase;
     font-family: var(--font)
+}
+
+.calculator> button:hover {
+    background-color: var(--btn-primary-hover) ;
 }
 
 button:nth-child(-n+4){
