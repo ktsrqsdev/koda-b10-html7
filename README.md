@@ -2,6 +2,10 @@
 
 This is a simple calculator design made with HTML and CSS. I made this project to practice my HTML structure and CSS styling.
 
+| Reference | Result |
+|-----------|--------|
+|![](references.jpg) | ![](result.png) |
+
 ## Features
 
 - Calculator display
