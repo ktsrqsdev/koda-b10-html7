@@ -33,9 +33,12 @@ $(document).ready(function () {
             hasil = Number(angkaPertama) / Number(angkaKedua);
         }
 
-        $("#display").text(hasil);
-        console.log(hasil);
-
+        if (Number.isNaN(hasil) || hasil === Infinity) {
+            $("#display").text("tidak bisa dibagi 0");
+        } else {
+            $("#display").text(hasil);
+        }
+        
         angkaPertama = hasil.toString();
         angkaKedua = "";
         operator = "";
@@ -56,7 +59,7 @@ $(document).ready(function () {
         } else {
             angkaKedua = "";
         }
-        
+
         $("#display").text("0");
     });
 });
