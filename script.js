@@ -25,12 +25,19 @@ $(document).ready(function () {
     $(".equals").click(function () {
         if (operator === "+") {
             hasil = Number(angkaPertama) + Number(angkaKedua);
+        } else if (operator === "-") {
+            hasil = Number(angkaPertama) - Number(angkaKedua);
+        } else if (operator === "×") {
+            hasil = Number(angkaPertama) * Number(angkaKedua);
+        } else if (operator === "÷") {
+            hasil = Number(angkaPertama) / Number(angkaKedua);
         }
 
         $("#display").text(hasil);
+        console.log(hasil)
 
         angkaPertama = hasil.toString();
         angkaKedua = "";
-        operator= "";
+        operator = "";
     });
 });
