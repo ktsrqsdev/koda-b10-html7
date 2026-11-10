@@ -38,7 +38,7 @@ $(document).ready(function () {
         } else {
             $("#display").text(hasil);
         }
-        
+
         angkaPertama = hasil.toString();
         angkaKedua = "";
         operator = "";
@@ -61,5 +61,15 @@ $(document).ready(function () {
         }
 
         $("#display").text("0");
+    });
+
+    $(".del").click(function () {
+        if (operator === "") {
+            angkaPertama = angkaPertama.slice(0, -1);
+            $("#display").text(angkaPertama || "0");
+        } else {
+            angkaKedua = angkaKedua.slice(0, -1);
+            $("#display").text(angkaKedua || "0");
+        }
     });
 });
