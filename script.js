@@ -96,4 +96,17 @@ $(document).ready(function () {
             $("#display").text(angkaKedua);
         }
     });
+
+    $(".mplus").click(function () {
+        memory += Number($("#display").text());
+    });
+
+    $(".mminus").click(function () {
+        memory -= Number($("#display").text());
+    });
+
+    $(".mr").click(function () {
+        $("#display").text(memory);
+        angkaPertama = memory.toString();
+    });
 });
