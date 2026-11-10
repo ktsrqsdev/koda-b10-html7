@@ -72,4 +72,14 @@ $(document).ready(function () {
             $("#display").text(angkaKedua || "0");
         }
     });
+
+    $(".percent").click(function () {
+        if (operator === "") {
+            angkaPertama = (Number(angkaPertama) / 100).toString();
+            $("#display").text(angkaPertama);
+        } else {
+            angkaKedua = (Number(angkaKedua) / 100).toString();
+            $("#display").text(angkaKedua);
+        }
+    });
 });
