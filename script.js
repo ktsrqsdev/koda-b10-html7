@@ -34,18 +34,29 @@ $(document).ready(function () {
         }
 
         $("#display").text(hasil);
-        console.log(hasil)
+        console.log(hasil);
 
         angkaPertama = hasil.toString();
         angkaKedua = "";
         operator = "";
     });
-    $(".ac").click(function (){
+
+    $(".ac").click(function () {
         angkaPertama = "";
         angkaKedua = "";
         operator = "";
         hasil = "";
 
         $("#display").text("0");
-    })
+    });
+
+    $(".ce").click(function () {
+        if (operator === "") {
+            angkaPertama = "";
+        } else {
+            angkaKedua = "";
+        }
+        
+        $("#display").text("0");
+    });
 });
