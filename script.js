@@ -35,8 +35,12 @@ $(document).ready(function () {
 
         if (Number.isNaN(hasil) || hasil === Infinity) {
             $("#display").text("tidak bisa dibagi 0");
+            hasil = "";
         } else {
-            $("#display").text(hasil);
+            let hasilFormat = Number(hasil.toFixed(8));
+
+            $("#display").text(hasilFormat);
+            angkaPertama = hasilFormat.toString();
         }
 
         angkaPertama = hasil.toString();
@@ -79,6 +83,16 @@ $(document).ready(function () {
             $("#display").text(angkaPertama);
         } else {
             angkaKedua = (Number(angkaKedua) / 100).toString();
+            $("#display").text(angkaKedua);
+        }
+    });
+
+    $(".sign").click(function () {
+        if (operator === "") {
+            angkaPertama = (Number(angkaPertama) * -1).toString();
+            $("#display").text(angkaPertama);
+        } else {
+            angkaKedua = (Number(angkaKedua) * -1).toString();
             $("#display").text(angkaKedua);
         }
     });
