@@ -40,4 +40,12 @@ $(document).ready(function () {
         angkaKedua = "";
         operator = "";
     });
+    $(".ac").click(function (){
+        angkaPertama = "";
+        angkaKedua = "";
+        operator = "";
+        hasil = "";
+
+        $("#display").text("0");
+    })
 });
