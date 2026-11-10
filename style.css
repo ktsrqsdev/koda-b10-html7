@@ -42,6 +42,12 @@ body{
     text-align: end;
     font-weight: 600;
     font-size: 2.6rem;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+
+.calculator > div::-webkit-scrollbar{
+    display: none;
 }
 
 button {
